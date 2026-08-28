@@ -1,0 +1,78 @@
+*{
+    margin: 0;
+    padding: 1fr;
+}body {
+    background-color: red;
+    font-size: 20px; /* Adicionado px */
+}
+h2 {
+    font-size: 30px;
+    padding: 0%;  /* Adicionado px */
+}
+button {
+    size: 30px;
+    padding: 0.8rem 2.5rem;
+    background-color: blue;
+    margin: 15;
+    color: white;
+    border-radius: 999px;
+}
+select:focus{
+    border-color: red;
+}
+
+select > option {
+    font-size: 15px;  
+}
+
+ul > li > a {
+    text-decoration: none;
+    color: black;
+    transition: all 0.2s;
+}
+input,select {
+    border-color: red;
+    border-radius: 999px;
+}
+
+
+
+.perguntas{
+    background-color: white;
+    color: #2c2c22;
+}
+
+.baner {
+    width: 100%;
+    padding: 15px;    /* Adicionado px */
+    text-align: center;
+    font-size: 100;  /* Adicionado px */
+    color: white;
+}
+
+.formulario {
+    margin: 10%;
+    margin-top: 0;
+    padding: 15px;
+    background-color: aliceblue;
+}
+
+
+
+
+
+#nome, 
+#telefone,  
+#email, 
+#assunto {
+    width: 80%;
+    background-color: white;
+    border-radius: 99999px;
+    padding: 10px ;
+    margin: 5px;
+    top:0;
+}
+
+#mensagem {
+    width: 100%;
+}
