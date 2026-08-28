@@ -1,0 +1,55 @@
+/* Seletor por TAG */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f2f2f2;
+}
+
+form {
+    max-width: 500px;
+    margin: auto;
+}
+
+/* Seletor por ID */
+#titulo {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Seletor por CLASSE */
+.campo {
+    margin-bottom: 15px;
+}
+
+/* Campos do formulário */
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    box-sizing: border-box;
+}
+
+/* Botão */
+button {
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+/* Media Query */
+@media (max-width: 600px) {
+    body {
+        margin: 10px;
+    }
+
+    form {
+        width: 100%;
+    }
+
+    input,
+    select,
+    textarea {
+        font-size: 16px;
+    }
+}
