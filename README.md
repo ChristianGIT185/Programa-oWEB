@@ -1,2 +1,5 @@
 # Programa-oWEB
-Repositório de atividades de Programação para Web
+
+Disciplina: Programação para Web
+Professor(a): Norton 
+Finalidade: Repositório criado para guardar atividades e trabalhos da disciplina de Programação para web
