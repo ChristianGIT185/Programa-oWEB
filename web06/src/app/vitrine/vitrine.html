@@ -1,0 +1,23 @@
+<div class="alert alert-warning" *ngIf="lista.length<=0"><strong>Vazio!</strong> 
+    não existem produtos na vitrine!</div>
+
+<div class="row">
+    <div class="card col-12 col-sm-12 col-md-4 col-lg-3 col-xl-2" *ngFor="let obj of lista">
+        <img class="card-img-top" src="{{obj.codigo}}.jpg"  style="width:100%">
+        <div class="card-body">
+            <h4 class="card-title">{{obj.nome}}</h4>
+            <p class="card-text" *ngIf="obj.promo>0">
+                 de: <s>R$ {{obj.valor}}</s><br>
+                 por: R$ {{obj.promo}}
+            </p>
+             <p class="card-text" *ngIf="obj.promo<=0">
+                 por: R$ {{obj.valor}}
+            </p>
+            <a href="#" class="btn btn-primary">ver mais</a> 
+            <a href="#" class="btn btn-success" *ngIf="obj.quantidade>0">comprar</a>
+        </div>
+    </div>
+
+   
+  
+</div>

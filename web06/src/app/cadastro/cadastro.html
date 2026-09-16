@@ -1,0 +1,40 @@
+<h3>Cadastro</h3>
+
+<div class="alert alert-success"><strong>Parabens!</strong> 
+    seu cadastro foi realizado com sucesso!</div>
+<form class="was-validated">
+<label for="txtNome" class="form-label">nome:</label>
+<input type="text" class="form-control" id="txtNome" 
+placeholder="Informe o seu nome" required>
+<div class="invalid-feedback">Preencha esse campo!</div>
+
+<label for="txtEmail" class="form-label">email:</label>
+<input type="email" class="form-control" id="txtEmail" 
+placeholder="Informe o seu email" required>
+<div class="invalid-feedback">Preencha esse campo!</div>
+
+<label for="txtTelefone" class="form-label">telefone:</label>
+<input type="text" class="form-control" id="txtTelefone" 
+placeholder="Informe o seu telefone" required pattern="[0-9]{4,5}-[0-9]{4}">
+<div class="invalid-feedback">Preencha esse campo corretamente!</div>
+
+<label for="txtDocumento" class="form-label">documento:</label>
+<input type="text" class="form-control" id="txtDocumento" 
+placeholder="Informe o seu documento" required >
+<div class="invalid-feedback">Preencha esse campo corretamente!</div>
+
+<label for="txtSenha" class="form-label">senha:</label>
+<input type="password" class="form-control" id="txtSenha" 
+placeholder="Informe a sua senha" required 
+pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}"
+   >
+<div class="invalid-feedback">"A senha deve conter pelo menos 8 caracteres, incluindo uma letra maiúscula, uma letra minúscula, um número e um caractere especial (@$!%*?&)."</div>
+
+ <label for="txtLogradouro" class="form-label">Endereço:</label>
+<textarea class="form-control" id="txtLogradouro" 
+placeholder="Informe o seu endereço completo" required  rows="5"></textarea>
+<div class="invalid-feedback">"Endereço completo!"</div>
+
+
+<button class="btn btn-success">Atualizar</button>
+</form>
