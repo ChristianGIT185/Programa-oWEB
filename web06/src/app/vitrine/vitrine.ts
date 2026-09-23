@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Produto } from '../model/produto';
 import { CommonModule } from '@angular/common';
+import { ItemCesta } from '../model/item-cesta';
 
 @Component({
   imports: [CommonModule],
@@ -9,6 +10,8 @@ import { CommonModule } from '@angular/common';
   templateUrl: './vitrine.html',
 })
 export class Vitrine {
+  private readonly chaveCesta = 'cesta';
+
   lista: Produto[] = [
   {
     "codigo": 1,
@@ -102,6 +105,32 @@ export class Vitrine {
   }
 ];
 
+  adicionarCesta(produto: Produto): void {
+    if (typeof localStorage === 'undefined') {
+      return;
+    }
+
+    const valor = produto.promo > 0 ? produto.promo : produto.valor;
+    const item = new ItemCesta();
+    item.codigo = produto.codigo;
+    item.nome = produto.nome;
+    item.quantidade = 1;
+    item.valor = valor;
+    item.valorTotal = valor;
+
+    const cestaSalva = localStorage.getItem(this.chaveCesta);
+    const lista: ItemCesta[] = cestaSalva ? JSON.parse(cestaSalva) : [];
+    const itemExistente = lista.find((itemCesta) => itemCesta.codigo === produto.codigo);
+
+    if (itemExistente) {
+      itemExistente.quantidade += 1;
+      itemExistente.valorTotal = itemExistente.quantidade * itemExistente.valor;
+    } else {
+      lista.push(item);
+    }
+
+    localStorage.setItem(this.chaveCesta, JSON.stringify(lista));
+  }
 
 
 }

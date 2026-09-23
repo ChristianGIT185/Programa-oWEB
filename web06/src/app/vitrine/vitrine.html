@@ -14,7 +14,7 @@
                  por: R$ {{obj.valor}}
             </p>
             <a href="#" class="btn btn-primary">ver mais</a> 
-            <a href="#" class="btn btn-success" *ngIf="obj.quantidade>0">comprar</a>
+            <button type="button" class="btn btn-success" *ngIf="obj.quantidade>0" (click)="adicionarCesta(obj)">comprar</button>
         </div>
     </div>
 
