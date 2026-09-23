@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ItemCesta } from '../model/item-cesta';
 
 @Component({
   imports: [CommonModule],
@@ -9,14 +8,24 @@ import { ItemCesta } from '../model/item-cesta';
   templateUrl: './cesta.html',
 })
 export class Cesta {
-  lista: ItemCesta[] = [];
-
-  ngOnInit(): void {
-    if (typeof localStorage === 'undefined') {
-      return;
-    }
-
-    const cestaSalva = localStorage.getItem('cesta');
-    this.lista = cestaSalva ? JSON.parse(cestaSalva) : [];
-  }
+  lista = [
+    {
+      codigo: 1,
+      nome: 'Martelo de Unha 25mm',
+      quantidade: 2,
+      valor: 39.9,
+    },
+    {
+      codigo: 3,
+      nome: 'Jogo de Chaves Allen',
+      quantidade: 1,
+      valor: 32.9,
+    },
+    {
+      codigo: 8,
+      nome: 'Furadeira de Impacto 650W',
+      quantidade: 1,
+      valor: 289.9,
+    },
+  ];
 }
