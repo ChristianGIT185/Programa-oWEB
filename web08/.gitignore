@@ -1,0 +1,20 @@
+//Arquivos desnecessários para a atividade web;
+
+# Maven
+target/
+
+# Java
+*.class
+*.log
+
+# IDEs
+.idea/
+*.iml
+.classpath
+.project
+.settings/
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+Desktop.ini
